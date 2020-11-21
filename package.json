@@ -1,6 +1,6 @@
 {
   "name": "vue-agile-ally",
-  "version": "1.1.3.1",
+  "version": "1.1.3",
   "description": "A carousel component for Vue.js",
   "author": "Łukasz Florczak <lukasz@florczak.dev>",
   "scripts": {
@@ -54,6 +54,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samuelnee/vue-agile.git"
+    "url": "git+https://github.com/samuelnee/vue-agile-a11y.git"
   }
 }
