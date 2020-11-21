@@ -30,12 +30,20 @@ const mixin = {
 
 			// Remove active & current classes
 			for (let i = 0; i < this.countSlides; i++) {
-				this.slides[i].classList.remove('agile__slide--active')
-				this.slides[i].classList.remove('agile__slide--current')
+				this.slides[i].classList.remove('agile__slide--active');
+				this.slides[i].classList.remove('agile__slide--current');
+				if (this.a11y){
+					this.slides[i].setAttribute('aria-hidden', 'true');
+				}
 			}
 
 			// Add active & current class for current slide
-			setTimeout(() => this.slides[this.currentSlide].classList.add('agile__slide--active'), this.changeDelay)
+			setTimeout(() => {
+				this.slides[this.currentSlide].classList.add('agile__slide--active');
+				if (this.a11y) {
+					this.slides[this.currentSlide].setAttribute('aria-hidden', 'false');
+				}
+			}, this.changeDelay)
 
 			let start = (this.slidesCloned) ? this.countSlides + this.currentSlide : this.currentSlide
 

@@ -7,6 +7,13 @@ import orderBy from 'lodash.orderby'
 const mixin = {
 	props: {
 		/**
+		 * Enable accessibility features
+		 */
+		a11y: {
+			type: Boolean,
+			default: true
+		},
+		/**
 		 * Set the carousel to be the navigation of other carousels
 		 */
 		asNavFor: {

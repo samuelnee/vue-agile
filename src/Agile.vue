@@ -11,6 +11,7 @@
 			<div
 				ref="track"
 				class="agile__track"
+				:aria-live="settings.a11y ? 'polite':'off'"
 				:style="{transform: `translate(${translateX + marginX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms`}"
 				@mouseover="handleMouseOver('track')"
 				@mouseout="handleMouseOut('track')"
